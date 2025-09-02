@@ -1,37 +1,10 @@
 import React from "react";
+import Navbar from "../layout_files/Navbar";
+import Footer from "../layout_files/Footer";
 
 const HomePage = () => {
   return (
-    <div className="bg-gray-50 text-gray-900 font-family: Inter, sans-serif">
-      <div className="relative flex min-h-screen flex-col">
-        {/* header */}
-        <header className="fixed top-0 z-50 bg-white shadow-md w-full">
-          <div className="container mx-auto flex items-center justify-between px-6 py-4">
-            <h2 className="text-xl font-bold text-gray-900">
-              Smart Student Hub
-            </h2>
-            <div className="flex items-center gap-6">
-              <a className="text-gray-600 hover:text-[#137fec]" href="#">
-                Features
-              </a>
-              <a
-                className="text-gray-600 hover:text-[#137fec] hidden sm:block"
-                href="#"
-              >
-                Log In
-              </a>
-              <a
-                className="rounded-lg bg-[#137fec] px-4 py-2 text-white hover:bg-blue-700"
-                href="#"
-              >
-                Sign Up
-              </a>
-            </div>
-          </div>
-        </header>
-
-        {/* <!-- Hero --> */}
-        <main className="flex-1 mt-18">
+    <main className="flex-1 mt-18">
           <section className="bg-white py-20">
             <div className="container mx-auto grid gap-12 lg:grid-cols-2 px-6">
               <div>
@@ -277,58 +250,6 @@ const HomePage = () => {
             </a>
           </section>
         </main>
-
-        {/* <!-- Footer --> */}
-        <footer className="bg-gray-800 text-white">
-          <div className="container mx-auto px-6 py-12">
-            <div className="grid gap-8 md:grid-cols-4">
-              <div>
-                <h3 className="font-semibold">Smart Student Hub</h3>
-                <p className="mt-2 text-gray-400">
-                  Empowering students to succeed.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold">Product</h3>
-                <ul className="mt-2 space-y-2 text-gray-400">
-                  <li>
-                    <a href="#">Features</a>
-                  </li>
-                  <li>
-                    <a href="#">Pricing</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold">Company</h3>
-                <ul className="mt-2 space-y-2 text-gray-400">
-                  <li>
-                    <a href="#">About Us</a>
-                  </li>
-                  <li>
-                    <a href="#">Careers</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold">Legal</h3>
-                <ul className="mt-2 space-y-2 text-gray-400">
-                  <li>
-                    <a href="#">Terms</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <p className="mt-8 text-center text-gray-400">
-              © 2024 Smart Student Hub. All rights reserved.
-            </p>
-          </div>
-        </footer>
-      </div>
-    </div>
   );
 };
 

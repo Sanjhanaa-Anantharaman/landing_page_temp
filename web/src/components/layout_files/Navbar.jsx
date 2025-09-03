@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 z-50 bg-white shadow-md w-full">
       <div className="container mx-auto flex items-center justify-between px-3 md:px-6 py-4">
-        <h2 className="text-xl font-bold text-gray-900">Smart Student Hub</h2>
+        <Link className="text-xl font-bold text-gray-900" to={'/home'}>Smart Student Hub</Link>
         <div className="flex items-center gap-6">
           <div>
             {theme === "light" ? (

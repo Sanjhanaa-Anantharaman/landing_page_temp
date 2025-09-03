@@ -4,7 +4,7 @@ import SideBar from "../layout_files/SideBar";
 const Dashboard = () => {
   return (
     <div className="bg-slate-50 flex mt-18 font-sans relative">
-      <div className="h-screen md:fixed top-18">
+      <div className="h-screen z-2 hidden md:flex md:fixed top-18 ">
         <SideBar />
       </div>
       <div className="min-h-screen md:ml-65 flex flex-1 flex-col p-8">

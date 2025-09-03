@@ -6,7 +6,7 @@ import {motion} from 'motion/react'
 
 const SideBar = () => {
   return (
-    <motion.div className="bg-slate-200 min-h-screen w-0 md:w-65 p-4">
+    <motion.div className="bg-slate-200 z-2 min-h-screen hidden md:flex md:w-65 p-4">
       <div className="text-black">
         <Link className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2" to={'/dashboard'}>
           <CiGrid42 size={27} />

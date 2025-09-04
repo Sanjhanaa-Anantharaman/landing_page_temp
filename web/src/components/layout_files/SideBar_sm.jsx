@@ -5,6 +5,7 @@ import { CiGrid42 } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { Link, useLocation } from "react-router-dom";
 import { MdCancel } from "react-icons/md";
+import { FiBriefcase } from "react-icons/fi";
 
 const SideBar_sm = () => {
     const location = useLocation();
@@ -67,6 +68,13 @@ const SideBar_sm = () => {
                   >
                     <CgProfile size={27} />
                     Profile
+                  </Link>
+                  <Link
+                    className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2"
+                    to={"/portfolio"}
+                  >
+                    <FiBriefcase size={27} />
+                    Portfolio
                   </Link>
                 </div>
               </motion.div>

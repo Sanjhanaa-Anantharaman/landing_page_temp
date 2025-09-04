@@ -10,6 +10,7 @@ import LoginPage from './components/pages/LoginPage.jsx'
 import SignUpPage from './components/pages/SignUpPage.jsx'
 import Dashboard from './components/pages/Dashboard.jsx'
 import Profile from './components/pages/Profile.jsx'
+import Portfolio from './components/pages/Portfolio.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="/sign-up" element={<SignUpPage/>}/>
       <Route path="/dashboard" element={<Dashboard/>}/>
       <Route path="/profile" element={<Profile/>}/>
+      <Route path="/portfolio" element={<Portfolio/>}/>
     </Route>
   )
 )

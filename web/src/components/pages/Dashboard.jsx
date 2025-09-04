@@ -3,7 +3,7 @@ import SideBar from "../layout_files/SideBar";
 
 const Dashboard = () => {
   return (
-    <div className="bg-slate-50 flex mt-18 font-sans relative">
+    <div className="bg-[#f4f2ff] flex mt-18 font-sans relative">
       <div className="h-screen z-2 hidden md:flex md:fixed top-18 ">
         <SideBar />
       </div>
@@ -17,19 +17,19 @@ const Dashboard = () => {
               <h2 className="text-slate-800 text-2xl font-semibold mb-4">
                 Academic Performance
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex gap-6">
                 <div className="flex flex-col gap-2 rounded-md p-6 bg-white border border-slate-200 shadow-sm">
-                  <p className="text-slate-600 text-base font-medium">GPA</p>
+                  <p className="text-[#5344b3] text-base font-medium">GPA</p>
                   <p className="text-slate-900 text-4xl font-bold">3.8</p>
                 </div>
                 <div className="flex flex-col gap-2 rounded-md p-6 bg-white border border-slate-200 shadow-sm">
-                  <p className="text-slate-600 text-base font-medium">
+                  <p className="text-[#5344b3] text-base font-medium">
                     Attendance
                   </p>
                   <p className="text-slate-900 text-4xl font-bold">95%</p>
                 </div>
                 <div className="flex flex-col gap-2 rounded-md p-6 bg-white border border-slate-200 shadow-sm">
-                  <p className="text-slate-600 text-base font-medium">
+                  <p className="text-[#5344b3] text-base font-medium">
                     Credits
                   </p>
                   <p className="text-slate-900 text-4xl font-bold">120</p>
@@ -41,19 +41,19 @@ const Dashboard = () => {
                 Activity Tracker
               </h2>
               <div className="overflow-x-auto bg-white rounded-md border border-slate-200 shadow-sm">
-                <table className="w-full text-left">
+                <table className="max-w-[380px] text-left">
                   <thead className="bg-slate-50">
                     <tr>
-                      <th className="px-6 py-4 text-slate-600 text-sm font-semibold">
+                      <th className="px-6 py-4 text-[#5344b3] text-sm font-semibold">
                         Activity
                       </th>
-                      <th className="px-6 py-4 text-slate-600 text-sm font-semibold">
+                      <th className="px-6 py-4 text-[#5344b3] text-sm font-semibold">
                         Type
                       </th>
-                      <th className="px-6 py-4 text-slate-600 text-sm font-semibold">
+                      <th className="px-6 py-4 text-[#5344b3] text-sm font-semibold">
                         Date
                       </th>
-                      <th className="px-6 py-4 text-slate-600 text-sm font-semibold">
+                      <th className="px-6 py-4 text-[#5344b3] text-sm font-semibold">
                         Status
                       </th>
                     </tr>
@@ -63,8 +63,8 @@ const Dashboard = () => {
                       <td className="px-6 py-4 text-slate-800 font-medium">
                         Seminar on AI Ethics
                       </td>
-                      <td className="px-6 py-4 text-slate-600">Seminar</td>
-                      <td className="px-6 py-4 text-slate-600">2024-03-15</td>
+                      <td className="px-6 py-4 text-[#5344b3]">Seminar</td>
+                      <td className="px-6 py-4 text-[#5344b3]">2024-03-15</td>
                       <td className="px-6 py-4">
                         <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
                           Completed
@@ -75,8 +75,8 @@ const Dashboard = () => {
                       <td className="px-6 py-4 text-slate-800 font-medium">
                         National Conference on Technology
                       </td>
-                      <td className="px-6 py-4 text-slate-600">Conference</td>
-                      <td className="px-6 py-4 text-slate-600">2024-04-20</td>
+                      <td className="px-6 py-4 text-[#5344b3]">Conference</td>
+                      <td className="px-6 py-4 text-[#5344b3]">2024-04-20</td>
                       <td className="px-6 py-4">
                         <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
                           Upcoming
@@ -87,8 +87,8 @@ const Dashboard = () => {
                       <td className="px-6 py-4 text-slate-800 font-medium">
                         Summer Internship at Tech Innovators
                       </td>
-                      <td className="px-6 py-4 text-slate-600">Internship</td>
-                      <td className="px-6 py-4 text-slate-600">2024-06-01</td>
+                      <td className="px-6 py-4 text-[#5344b3]">Internship</td>
+                      <td className="px-6 py-4 text-[#5344b3]">2024-06-01</td>
                       <td className="px-6 py-4">
                         <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
                           Applied
@@ -108,7 +108,7 @@ const Dashboard = () => {
                   <h3 className="text-slate-900 text-xl font-semibold">
                     View and Share Your Portfolio
                   </h3>
-                  <p className="text-slate-600 mt-2">
+                  <p className="text-[#5344b3] mt-2">
                     Showcase your academic achievements and activities in a
                     professional, shareable format.
                   </p>
@@ -152,7 +152,7 @@ const Dashboard = () => {
                   <h3 className="font-semibold text-slate-800">
                     Guest Lecture: The Future of AI
                   </h3>
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-[#5344b3]">
                     April 28, 2024 - 2:00 PM
                   </p>
                 </div>
@@ -167,7 +167,7 @@ const Dashboard = () => {
                   <h3 className="font-semibold text-slate-800">
                     Career Fair 2024
                   </h3>
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-[#5344b3]">
                     May 5, 2024 - 10:00 AM
                   </p>
                 </div>
@@ -189,7 +189,7 @@ const Dashboard = () => {
                   <h3 className="font-semibold text-slate-800">
                     Library Hours Update
                   </h3>
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-[#5344b3]">
                     Extended hours for final exams start next week.
                   </p>
                 </div>
@@ -204,7 +204,7 @@ const Dashboard = () => {
                   <h3 className="font-semibold text-slate-800">
                     Scholarship Application Deadline
                   </h3>
-                  <p className="text-sm text-slate-500">
+                  <p className="text-sm text-[#5344b3]">
                     Submit your applications by May 15, 2024.
                   </p>
                 </div>

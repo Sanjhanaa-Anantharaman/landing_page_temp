@@ -52,9 +52,37 @@ const Profile = () => {
     },
   ];
 
+  const certificates = [
+    {
+      title: "Frontend Web Development Certificate",
+      imageSrc:
+        "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=500&q=60",
+      Date: "2023-03-15",
+      Issuer: "freeCodeCamp",
+      KeySkills: "HTML, CSS, JavaScript",
+    },
+    {
+      title: "React Developer Certificate",
+      imageSrc:
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=60",
+      Date: "2023-05-20",
+      Issuer: "Coursera",
+      KeySkills: "React, Hooks, State Management",
+    },
+    {
+      title: "Data Structures & Algorithms in C++",
+      imageSrc:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=60",
+      Date: "2023-07-05",
+      Issuer: "Coding Ninjas",
+      KeySkills: "DSA, Problem Solving, C++",
+    },
+  ];
+
+
 
   return (
-    <div className="bg-slate-50 font-sans text-gray-800">
+    <div className="bg-[#f4f2ff] font-sans text-gray-800">
       <div className="h-screen z-2 hidden md:flex md:fixed top-18 ">
         <SideBar />
       </div>
@@ -70,14 +98,23 @@ const Profile = () => {
           <div className="mt-6 flex flex-col relative gap-3">
             {conferences.map((con, index) => (
               <div key={index} className="flex gap-3 items-center">
-                <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full text-blue-500">
+                <div className="flex items-center justify-center w-10 h-10 bg-[#6f29d9]/20 rounded-full text-[#6f29d9]">
                   <FaRegCalendarAlt size={20} />
                 </div>
                 <div className="text-black bg-white p-2 shadow-lg rounded-lg flex-1">
                   <h1 className="text-[16px] font-semibold">{con.title}</h1>
-                  <p className="mt-1">
-                    Date: {con.Date} | Location: {con.Location} | Role:{" "}
-                    {con.Role}
+                  <p className="mt-1 text-[#5344b3]">
+                    <div className="flex flex-col sm:gap-1 sm:flex-row">
+                      <div>
+                        <span>Date: {con.Date}</span>
+                      </div>
+                      <div>
+                        <span>| Location: {con.Location}</span>
+                      </div>
+                      <div>
+                        <span>| Role: {con.Role}</span>
+                      </div>
+                    </div>
                   </p>
                 </div>
               </div>
@@ -108,15 +145,17 @@ const Profile = () => {
                     <h2 className="text-lg font-semibold text-gray-900 mb-2">
                       {wshop.title}
                     </h2>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       📅 Date: <span className="font-medium">{wshop.Date}</span>
                     </p>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       👤 Organizer:{" "}
                       <span className="font-medium">{wshop.Organizer}</span>
                     </p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      <span className="font-semibold">Key Learnings:</span>{" "}
+                    <p className="text-sm text-[#5344b3] mt-2">
+                      <span className="font-semibold text-black">
+                        Key Learnings:
+                      </span>{" "}
                       {wshop.KeyLearnings}
                     </p>
                   </div>
@@ -135,33 +174,35 @@ const Profile = () => {
 
           <div className="mt-6 overflow-x-auto">
             <div className="flex gap-6 w-max items-center">
-              {workshops.map((wshop, index) => (
+              {certificates.map((cert, index) => (
                 <div
                   key={index}
                   className="min-w-[280px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 >
                   {/* Image */}
                   <img
-                    src={wshop.imageSrc}
-                    alt={wshop.title}
+                    src={cert.imageSrc}
+                    alt={cert.title}
                     className="w-full h-40 object-cover"
                   />
 
                   {/* Content */}
                   <div className="p-4">
                     <h2 className="text-lg font-semibold text-gray-900 mb-2">
-                      {wshop.title}
+                      {cert.title}
                     </h2>
-                    <p className="text-sm text-gray-600 mb-1">
-                      📅 Date: <span className="font-medium">{wshop.Date}</span>
+                    <p className="text-sm text-[#5344b3] mb-1">
+                      📅 Date: <span className="font-medium">{cert.Date}</span>
                     </p>
-                    <p className="text-sm text-gray-600 mb-1">
-                      👤 Organizer:{" "}
-                      <span className="font-medium">{wshop.Organizer}</span>
+                    <p className="text-sm text-[#5344b3] mb-1">
+                      🏢 Issuer:{" "}
+                      <span className="font-medium">{cert.Issuer}</span>
                     </p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      <span className="font-semibold">Key Learnings:</span>{" "}
-                      {wshop.KeyLearnings}
+                    <p className="text-sm text-[#5344b3] mt-2">
+                      <span className="font-semibold text-black">
+                        Key Skills:
+                      </span>{" "}
+                      {cert.KeySkills}
                     </p>
                   </div>
                 </div>
@@ -196,15 +237,17 @@ const Profile = () => {
                     <h2 className="text-lg font-semibold text-gray-900 mb-2">
                       {wshop.title}
                     </h2>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       📅 Date: <span className="font-medium">{wshop.Date}</span>
                     </p>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       👤 Organizer:{" "}
                       <span className="font-medium">{wshop.Organizer}</span>
                     </p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      <span className="font-semibold">Key Learnings:</span>{" "}
+                    <p className="text-sm text-[#5344b3] mt-2">
+                      <span className="font-semibold text-black">
+                        Key Learnings:
+                      </span>{" "}
                       {wshop.KeyLearnings}
                     </p>
                   </div>
@@ -240,15 +283,17 @@ const Profile = () => {
                     <h2 className="text-lg font-semibold text-gray-900 mb-2">
                       {wshop.title}
                     </h2>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       📅 Date: <span className="font-medium">{wshop.Date}</span>
                     </p>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       👤 Organizer:{" "}
                       <span className="font-medium">{wshop.Organizer}</span>
                     </p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      <span className="font-semibold">Key Learnings:</span>{" "}
+                    <p className="text-sm text-[#5344b3] mt-2">
+                      <span className="font-semibold text-black">
+                        Key Learnings:
+                      </span>{" "}
                       {wshop.KeyLearnings}
                     </p>
                   </div>
@@ -284,15 +329,17 @@ const Profile = () => {
                     <h2 className="text-lg font-semibold text-gray-900 mb-2">
                       {wshop.title}
                     </h2>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       📅 Date: <span className="font-medium">{wshop.Date}</span>
                     </p>
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-sm text-[#5344b3] mb-1">
                       👤 Organizer:{" "}
                       <span className="font-medium">{wshop.Organizer}</span>
                     </p>
-                    <p className="text-sm text-gray-700 mt-2">
-                      <span className="font-semibold">Key Learnings:</span>{" "}
+                    <p className="text-sm text-[#5344b3] mt-2">
+                      <span className="font-semibold text-black">
+                        Key Learnings:
+                      </span>{" "}
                       {wshop.KeyLearnings}
                     </p>
                   </div>
@@ -312,12 +359,12 @@ const Profile = () => {
           <div className="mt-6 flex flex-col relative gap-3">
             {conferences.map((con, index) => (
               <div key={index} className="flex gap-3 items-center">
-                <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full text-blue-500">
+                <div className="flex items-center justify-center w-10 h-10 bg-[#6f29d9]/20 rounded-full text-[#6f29d9]">
                   <FaRegCalendarAlt size={20} />
                 </div>
                 <div className="text-black bg-white p-2 shadow-lg rounded-lg flex-1">
                   <h1 className="text-[16px] font-semibold">{con.title}</h1>
-                  <p className="mt-1">
+                  <p className="mt-1 text-[#5344b3]">
                     Date: {con.Date} | Location: {con.Location} | Role:{" "}
                     {con.Role}
                   </p>

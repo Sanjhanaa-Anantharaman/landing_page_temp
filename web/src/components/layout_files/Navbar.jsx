@@ -58,7 +58,7 @@ const Navbar = () => {
             Menu
           </button>
           <Link
-            className="rounded-lg bg-[#137fec] px-4 py-2 text-white hover:bg-blue-700"
+            className="rounded-lg bg-[#6C47FF] px-4 py-2 text-white hover:bg-[#6C47FF]/80"
             to="/sign-up"
           >
             Sign Up

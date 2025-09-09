@@ -30,7 +30,7 @@ function InternshipCard({ company, role, period, status }) {
         <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer">
           Details
         </button>
-        <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-teal-500 text-white hover:bg-teal-600 cursor-pointer">
+        <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-[#6C47FF] text-white hover:bg-[#6C47FF]/80 cursor-pointer">
           Update
         </button>
       </div>
@@ -93,7 +93,7 @@ export default function InternshipSection() {
               Log and manage internships with statuses and dates.
             </p>
           </div>
-          <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-teal-500 text-white hover:bg-teal-600 whitespace-nowrap cursor-pointer">
+          <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-[#6C47FF] text-white hover:bg-[#6C47FF]/80 whitespace-nowrap cursor-pointer">
             Add Internship
           </button>
         </div>

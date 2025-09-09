@@ -76,6 +76,20 @@ const SideBar_sm = () => {
                     <FiBriefcase size={27} />
                     Portfolio
                   </Link>
+                  <Link
+                    className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2"
+                    to={"/internships"}
+                  >
+                    <FiBriefcase size={27} />
+                    Internships
+                  </Link>
+                  <Link
+                    className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2"
+                    to={"/approvals"}
+                  >
+                    <FiBriefcase size={27} />
+                    Approvals
+                  </Link>
                 </div>
               </motion.div>
             )}

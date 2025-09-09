@@ -1,4 +1,5 @@
 import React from "react";
+import SideBar from "../layout_files/SideBar";
 
 function InternshipCard({ company, role, period, status }) {
   return (
@@ -78,25 +79,30 @@ export default function InternshipSection() {
   ];
 
   return (
-    <section className="mb-12 mt-18 p-6">
-      <div className="mb-3 sm:mb-4 flex items-center justify-between gap-3">
-        <div>
-          <h2 className="text-slate-800 font-semibold text-lg sm:text-xl">
-            Internship Records
-          </h2>
-          <p className="text-slate-500 text-sm">
-            Log and manage internships with statuses and dates.
-          </p>
-        </div>
-        <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-teal-500 text-white hover:bg-teal-600 whitespace-nowrap cursor-pointer">
-          Add Internship
-        </button>
+    <section className="bg-[#f4f2ff] flex mt-18 font-sans relative">
+      <div className="h-screen z-2 hidden md:flex md:fixed top-18 ">
+        <SideBar />
       </div>
+      <div className="min-h-screen md:ml-65 flex flex-col p-8 w-full">
+        <div className="mb-3 sm:mb-4 flex items-center justify-between gap-3">
+          <div>
+            <h2 className="text-slate-800 font-semibold text-lg sm:text-xl">
+              Internship Records
+            </h2>
+            <p className="text-slate-500 text-sm">
+              Log and manage internships with statuses and dates.
+            </p>
+          </div>
+          <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-teal-500 text-white hover:bg-teal-600 whitespace-nowrap cursor-pointer">
+            Add Internship
+          </button>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {internships.map((it) => (
-          <InternshipCard key={`${it.company}-${it.period}`} {...it} />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {internships.map((it) => (
+            <InternshipCard key={`${it.company}-${it.period}`} {...it} />
+          ))}
+        </div>
       </div>
     </section>
   );

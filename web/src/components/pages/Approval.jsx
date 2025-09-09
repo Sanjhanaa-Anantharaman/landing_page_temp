@@ -1,4 +1,5 @@
 import React from "react";
+import SideBar from "../layout_files/SideBar";
 
 const colorMap = {
   amber: "bg-amber-50 text-amber-700 ring-amber-200",
@@ -43,45 +44,50 @@ export default function Approval() {
   ];
 
   return (
-    <section className="mb-6 sm:mb-10 mt-18 p-8">
-      <div className="mb-3 sm:mb-4 flex items-center justify-between gap-3">
-        <div>
-          <h2 className="text-slate-800 font-semibold text-lg sm:text-xl">
-            Faculty Approvals
-          </h2>
-          <p className="text-slate-500 text-sm">
-            Monitor, approve, and track student submissions.
-          </p>
-        </div>
-        <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium border border-slate-300 text-slate-700 bg-white hover:bg-slate-100 transition-colors whitespace-nowrap cursor-pointer">
-          Export
-        </button>
+    <section className="bg-[#f4f2ff] flex mt-18 font-sans relative">
+      <div className="h-screen z-2 hidden md:flex md:fixed top-18 ">
+        <SideBar />
       </div>
+      <div className="min-h-screen md:ml-65 flex flex-col p-8 w-full">
+        <div className="mb-3 sm:mb-4 flex items-center justify-between gap-3">
+          <div>
+            <h2 className="text-slate-800 font-semibold text-lg sm:text-xl">
+              Faculty Approvals
+            </h2>
+            <p className="text-slate-500 text-sm">
+              Monitor, approve, and track student submissions.
+            </p>
+          </div>
+          <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium border border-slate-300 text-slate-700 bg-white hover:bg-slate-100 transition-colors whitespace-nowrap cursor-pointer">
+            Export
+          </button>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {cards.map((card) => (
-          <div
-            key={card.title}
-            className="bg-white shadow-sm rounded-xl border border-slate-200 p-4 sm:p-5"
-          >
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-sm text-slate-500">{card.title}</p>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-2xl font-semibold text-slate-800">
-                    {card.count}
-                  </span>
-                  <StatusPill color={card.color}>{card.desc}</StatusPill>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {cards.map((card) => (
+            <div
+              key={card.title}
+              className="bg-white shadow-sm rounded-xl border border-slate-200 p-4 sm:p-5"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <p className="text-sm text-slate-500">{card.title}</p>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="text-2xl font-semibold text-slate-800">
+                      {card.count}
+                    </span>
+                    <StatusPill color={card.color}>{card.desc}</StatusPill>
+                  </div>
                 </div>
               </div>
+              <div className="mt-4">
+                <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-teal-500 text-white hover:bg-teal-600 w-full sm:w-auto cursor-pointer">
+                  {card.cta}
+                </button>
+              </div>
             </div>
-            <div className="mt-4">
-              <button className="inline-flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium bg-teal-500 text-white hover:bg-teal-600 w-full sm:w-auto cursor-pointer">
-                {card.cta}
-              </button>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

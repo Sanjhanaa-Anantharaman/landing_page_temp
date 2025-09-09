@@ -47,8 +47,10 @@ const LoginPage = () => {
                         {...register("email", { required: true, minLength: 1 })}
                         autoComplete="email"
                         className={`${
-                          theme === "dark" ? "text-white" : "text-black"
-                        } relative block w-full appearance-none rounded-lg border border-[#2c3e50] bg-[#2c3e50]/20 px-3 py-3 placeholder-gray-400 focus:z-10 focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm`}
+                          theme === "dark"
+                            ? "text-white placeholder-gray-400"
+                            : "text-black placeholder-gray-600"
+                        } relative block w-full appearance-none rounded-lg border border-[#2c3e50] bg-[#2c3e50]/20 px-3 py-3  focus:z-10 focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm`}
                         id="email-address"
                         name="email"
                         placeholder="Email address"
@@ -56,7 +58,7 @@ const LoginPage = () => {
                         type="email"
                       />
                     </div>
-                    <div className='relative'>
+                    <div className="relative">
                       <label className="sr-only" htmlFor="password">
                         Password
                       </label>
@@ -67,13 +69,15 @@ const LoginPage = () => {
                         })}
                         autoComplete="current-password"
                         className={`${
-                          theme === "dark" ? "text-white" : "text-black"
-                        } relative block w-full appearance-none rounded-lg border border-[#2c3e50] bg-[#2c3e50]/20 px-3 py-3 placeholder-gray-400 focus:z-10 focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm`}
+                          theme === "dark"
+                            ? "text-white placeholder-gray-400"
+                            : "text-black placeholder-gray-600"
+                        } relative block w-full appearance-none rounded-lg border border-[#2c3e50] bg-[#2c3e50]/20 px-3 py-3 focus:z-10 focus:border-sky-500 focus:outline-none focus:ring-sky-500 sm:text-sm`}
                         id="password"
                         name="password"
                         placeholder="Password"
                         required
-                        type={!visibility? "password" : "text"}
+                        type={!visibility ? "password" : "text"}
                       />
                       <button
                         type="button"

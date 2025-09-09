@@ -13,6 +13,9 @@ import { HiChevronDown } from "react-icons/hi";
 
 const SideBar_sm = () => {
   const location = useLocation();
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+  const [hidden, setHidden] = useState(true);
+  const [expand, setExpand] = useState(false);
   function btnRouter() {
     if (
       location.pathname === "/home" ||
@@ -22,10 +25,9 @@ const SideBar_sm = () => {
     ) {
       return true;
     }
+
+    return isSmallScreen
   }
-  const [hidden, setHidden] = useState(true);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
-  const [expand, setExpand] = useState(false)
 
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
@@ -148,24 +150,17 @@ const SideBar_sm = () => {
                         <div className="flex flex-col mt-4 ml-8">
                           <NavLink
                             className="text-lg mb-2 flex gap-2 hover:bg-slate-400 rounded-lg p-2"
-                            to={"/dashboard"}
+                            to={"/workshops"}
                           >
                             <CiGrid42 size={27} />
-                            Dashboard
+                            Conferences & Workshops
                           </NavLink>
                           <NavLink
                             className="text-lg mb-2 flex gap-2 hover:bg-slate-400 rounded-lg p-2"
-                            to={"/profile"}
+                            to={"/engagements"}
                           >
                             <CgProfile size={27} />
-                            Profile
-                          </NavLink>
-                          <NavLink
-                            className="text-lg mb-2 flex gap-2 hover:bg-slate-400 rounded-lg p-2"
-                            to={"/portfolio"}
-                          >
-                            <FiBriefcase size={27} />
-                            Portfolio
+                            Engagements
                           </NavLink>
                         </div>
                       )}

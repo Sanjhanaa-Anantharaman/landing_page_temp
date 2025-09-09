@@ -262,7 +262,7 @@ const Profile = () => {
 
         {/* Volunteer */}
         <div className="mt-8">
-          <h1 className="font-bold text-xl">Clubs</h1>
+          <h1 className="font-bold text-xl">Volunteer</h1>
 
           <div className="mt-6 overflow-x-auto">
             <div className="flex gap-6 w-max items-center">
@@ -308,7 +308,7 @@ const Profile = () => {
 
         {/* Competition */}
         <div className="mt-8">
-          <h1 className="font-bold text-xl">Clubs</h1>
+          <h1 className="font-bold text-xl">Competitions</h1>
 
           <div className="mt-6 overflow-x-auto">
             <div className="flex gap-6 w-max items-center">

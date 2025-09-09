@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 z-50 bg-white shadow-md w-full">
-      <div className="container mx-auto flex items-center justify-between px-3 md:px-6 py-4 relative">
+      <div className="w-full flex items-center justify-between px-3 md:px-6 py-4 relative">
         <div className="flex items-center gap-3">
           <SideBar_sm />
           <Link className="text-xl font-bold text-gray-900" to={"/home"}>

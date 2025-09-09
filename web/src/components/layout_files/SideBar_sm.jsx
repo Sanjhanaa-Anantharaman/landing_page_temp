@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion } from "motion/react";
 import { CiGrid42 } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { Link, useLocation } from "react-router-dom";
@@ -8,23 +8,28 @@ import { MdCancel } from "react-icons/md";
 import { FiBriefcase } from "react-icons/fi";
 
 const SideBar_sm = () => {
-    const location = useLocation();
-    function btnRouter(){
-      if(location.pathname==='/home' || location.pathname==='/login' || location.pathname==='/sign-up' || location.pathname==='/'){
-        return true
-      }
+  const location = useLocation();
+  function btnRouter() {
+    if (
+      location.pathname === "/home" ||
+      location.pathname === "/login" ||
+      location.pathname === "/sign-up" ||
+      location.pathname === "/"
+    ) {
+      return true;
     }
-    const [hidden, setHidden] = useState(true);
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+  }
+  const [hidden, setHidden] = useState(true);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 
-    useEffect(() => {
-      const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div>
-      {(btnRouter() || isSmallScreen) && (
+      {btnRouter() && (
         <div className="flex">
           <button className="mt-2" onClick={() => setHidden((prev) => !prev)}>
             <FiMenu size={25} />
@@ -32,7 +37,7 @@ const SideBar_sm = () => {
           <AnimatePresence>
             {!hidden && (
               <motion.div
-                className="absolute top-0 left-0 bg-slate-200 w-[250px] z-2 min-h-screen flex-col flex p-4"
+                className="fixed top-0 left-0 bg-slate-200 w-[250px] z-50 min-h-screen flex-col flex p-4"
                 initial={{
                   scale: 1,
                   x: "-250px",
@@ -98,6 +103,6 @@ const SideBar_sm = () => {
       )}
     </div>
   );
-}
+};
 
-export default SideBar_sm
+export default SideBar_sm;

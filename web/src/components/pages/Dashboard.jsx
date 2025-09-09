@@ -219,46 +219,45 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
+        </div>
+        {/* Quick links */}
+        <div className="mt-8 rounded-xl bg-white p-6 shadow-md">
+          <h2 className="text-lg font-semibold text-gray-800 mb-4">
+            Quick Links
+          </h2>
+          <div className="space-y-3">
+            <Link
+              to="/course-catalog"
+              className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
+            >
+              <FaBook className="text-gray-600" />
+              <span className="text-sm text-gray-700">Course Catalog</span>
+            </Link>
 
+            <Link
+              to="/library"
+              className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
+            >
+              <FaUniversity className="text-gray-600" />
+              <span className="text-sm text-gray-700">Library Resources</span>
+            </Link>
+
+            <Link
+              to="/it-help"
+              className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
+            >
+              <FaHeadset className="text-gray-600" />
+              <span className="text-sm text-gray-700">IT Help Desk</span>
+            </Link>
+
+            <Link
+              to="/campus-map"
+              className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
+            >
+              <FaMapMarkedAlt className="text-gray-600" />
+              <span className="text-sm text-gray-700">Campus Map</span>
+            </Link>
           </div>
-          {/* Quick links */}
-          <div className="mt-8 rounded-xl bg-white p-6 shadow-md">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">
-              Quick Links
-            </h2>
-            <div className="space-y-3">
-              <Link
-                to="/course-catalog"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
-              >
-                <FaBook className="text-gray-600" />
-                <span className="text-sm text-gray-700">Course Catalog</span>
-              </Link>
-
-              <Link
-                to="/library"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
-              >
-                <FaUniversity className="text-gray-600" />
-                <span className="text-sm text-gray-700">Library Resources</span>
-              </Link>
-
-              <Link
-                to="/it-help"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
-              >
-                <FaHeadset className="text-gray-600" />
-                <span className="text-sm text-gray-700">IT Help Desk</span>
-              </Link>
-
-              <Link
-                to="/campus-map"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
-              >
-                <FaMapMarkedAlt className="text-gray-600" />
-                <span className="text-sm text-gray-700">Campus Map</span>
-              </Link>
-            </div>
         </div>
       </div>
     </div>

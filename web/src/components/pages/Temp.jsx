@@ -29,7 +29,7 @@ const Temp = () => {
       <div className="bg-[var(--background-color)] text-[var(--text-primary)] antialiased">
         <div className="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
           <div className="layout-container flex h-full grow flex-col">
-            <main className="container mx-auto px-6 py-12 max-w-4xl">
+            <main className="container mx-auto px-8  md:px-16 py-12 ">{/* max-w-4xl */}
               <section className="mb-16" id="about">
                 <div className="flex flex-col md:flex-row items-center gap-10">
                   <div className="flex-shrink-0">
@@ -388,7 +388,7 @@ const Temp = () => {
 
                   <div className="flex flex-col">
                     {/* right column */}
-                    <div className="bg-white flex flex-col gap-3 rounded-lg p-6">
+                    <div className="bg-white flex flex-col gap-3 shadow-xl rounded-lg p-6">
                       <div className="flex gap-3 items-center">
                         <PiStudent
                           className="text-lg text-[var(--primary-color)]"
@@ -422,7 +422,7 @@ const Temp = () => {
                         <FaDownload /> Export Admission Pack
                       </button>
 
-                      <div className="mt-4 rounded-lg border p-3 border-dashed">
+                      <div className="mt-5 rounded-lg border p-3 border-dashed">
                         <h3 className="font-medium">Recommendation Letters</h3>
                         <p className="text-sm text-gray-500">
                           No letters requested.

@@ -11,6 +11,8 @@ import SignUpPage from './components/pages/SignUpPage.jsx'
 import Dashboard from './components/pages/Dashboard.jsx'
 import Profile from './components/pages/Profile.jsx'
 import Portfolio from './components/pages/Portfolio.jsx'
+import Approval from './components/pages/Approval.jsx'
+import InternshipSection from './components/pages/Internship.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
       <Route path="/dashboard" element={<Dashboard/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/portfolio" element={<Portfolio/>}/>
+      <Route path="/approvals" element={<Approval/>}/>
+      <Route path="/internships" element={<InternshipSection/>}/>
     </Route>
   )
 )

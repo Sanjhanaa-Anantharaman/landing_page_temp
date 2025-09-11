@@ -1,34 +1,41 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import HomePage from './components/pages/HomePage.jsx'
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
-import { store } from './store/store.js'
-import {Provider} from 'react-redux'
-import LoginPage from './components/pages/LoginPage.jsx'
-import SignUpPage from './components/pages/SignUpPage.jsx'
-import Dashboard from './components/pages/Dashboard.jsx'
-import Profile from './components/pages/Profile.jsx'
-import Portfolio from './components/pages/Portfolio.jsx'
-import Approval from './components/pages/Approval.jsx'
-import InternshipSection from './components/pages/Internship.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import HomePage from "./components/pages/HomePage.jsx";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import { store } from "./store/store.js";
+import { Provider } from "react-redux";
+import LoginPage from "./components/pages/LoginPage.jsx";
+import SignUpPage from "./components/pages/SignUpPage.jsx";
+import Dashboard from "./components/pages/Dashboard.jsx";
+import Profile from "./components/pages/Profile.jsx";
+import Portfolio from "./components/pages/Portfolio.jsx";
+import Approval from "./components/pages/Approval.jsx";
+import InternshipSection from "./components/pages/Internship.jsx";
+import CommunityServiceLog from "./components/pages/CommunityServiceLog.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<App/>}>
-      <Route path="" element={<HomePage/>}/>
-      <Route path="/home" element={<HomePage/>}/>
-      <Route path="/login" element={<LoginPage/>}/>
-      <Route path="/sign-up" element={<SignUpPage/>}/>
-      <Route path="/dashboard" element={<Dashboard/>}/>
-      <Route path="/profile" element={<Profile/>}/>
-      <Route path="/portfolio" element={<Portfolio/>}/>
-      <Route path="/approvals" element={<Approval/>}/>
-      <Route path="/internships" element={<InternshipSection/>}/>
+    <Route path="/" element={<App />}>
+      <Route path="" element={<HomePage />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/sign-up" element={<SignUpPage />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/approvals" element={<Approval />} />
+      <Route path="/internships" element={<InternshipSection />} />
+      <Route path="/service-log" element={<CommunityServiceLog />} />
     </Route>
   )
-)
+);
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>

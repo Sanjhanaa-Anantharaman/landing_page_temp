@@ -1,60 +1,130 @@
-import React from "react";
-import { CiGrid42 } from "react-icons/ci";
+import React, { useState } from "react";
+import { CiGrid42, CiGrid41 } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "motion/react";
 import { FiBriefcase } from "react-icons/fi";
-import { CiGrid41 } from "react-icons/ci";
+import { FaRegFileAlt, FaUserGraduate } from "react-icons/fa";
+import { HiChevronDown } from "react-icons/hi";
 
 const SideBar = () => {
+  const [expand, setExpand] = useState(false);
+
   return (
     <motion.div className="bg-slate-200 z-2 min-h-screen hidden md:flex md:w-65 p-4">
-      <div className="text-black w-full">
-        <Link
-          className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2 w-full"
+      <div className="text-black w-full overflow-y-auto mb-40">
+        <NavLink
+          className={({ isActive }) =>
+            `text-lg mb-3 flex gap-2 rounded-lg p-2 ${
+              isActive ? "bg-[#6C47FF] text-white" : "hover:bg-slate-300"
+            }`
+          }
           to={"/dashboard"}
         >
           <CiGrid42 size={27} />
           Dashboard
-        </Link>
-        <Link
-          className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2 w-full"
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            `text-lg mb-3 flex gap-2 rounded-lg p-2 ${
+              isActive ? "bg-[#6C47FF] text-white" : "hover:bg-slate-300"
+            }`
+          }
           to={"/profile"}
         >
           <CgProfile size={27} />
           Profile
-        </Link>
-        <Link
-          className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2 w-full"
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            `text-lg mb-3 flex gap-2 rounded-lg p-2 ${
+              isActive ? "bg-[#6C47FF] text-white" : "hover:bg-slate-300"
+            }`
+          }
           to={"/portfolio"}
         >
           <FiBriefcase size={27} />
           Portfolio
-        </Link>
-        <Link
-          className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2"
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            `text-lg mb-3 flex gap-2 rounded-lg p-2 ${
+              isActive ? "bg-[#6C47FF] text-white" : "hover:bg-slate-300"
+            }`
+          }
           to={"/internships"}
         >
-          <FiBriefcase size={27} />
+          <FaUserGraduate size={27} />
           Internships
-        </Link>
-        <Link
-          className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2"
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) =>
+            `text-lg mb-3 flex gap-2 rounded-lg p-2 ${
+              isActive ? "bg-[#6C47FF] text-white" : "hover:bg-slate-300"
+            }`
+          }
           to={"/approvals"}
         >
-          <FiBriefcase size={27} />
+          <FaRegFileAlt size={27} />
           Approvals
-        </Link>
-        <Link
-          className="text-lg mb-3 flex gap-2 hover:bg-slate-300 rounded-lg p-2 w-full"
+        </NavLink>
+
+        {/* Community Log (from sanjhanaa-communitypage) */}
+        <NavLink
+          className={({ isActive }) =>
+            `text-lg mb-3 flex gap-2 rounded-lg p-2 ${
+              isActive ? "bg-[#6C47FF] text-white" : "hover:bg-slate-300"
+            }`
+          }
           to={"/service-log"}
         >
           <CiGrid41 size={27} />
           Community Log
-        </Link>
+        </NavLink>
+
+        {/* Expandable Section (from main) */}
+        <div className="text-lg mb-3 items-center flex-col gap-2 rounded-lg p-2">
+          <div>
+            <div className="flex gap-2">
+              <FaRegFileAlt size={27} />
+              ExtraCurricular
+              <button
+                className={`flex justify-center items-center ${
+                  expand ? "rotate-180" : ""
+                }`}
+                onClick={() => setExpand((prev) => !prev)}
+              >
+                <HiChevronDown size={27} />
+              </button>
+            </div>
+            {expand && (
+              <div className="flex flex-col mt-4 ml-8">
+                <NavLink
+                  className="text-lg mb-2 flex gap-2 hover:bg-slate-400 rounded-lg p-2"
+                  to={"/workshops"}
+                >
+                  <CiGrid42 size={27} />
+                  Conference & Workshops
+                </NavLink>
+                <NavLink
+                  className="text-lg mb-2 flex gap-2 hover:bg-slate-400 rounded-lg p-2"
+                  to={"/engagements"}
+                >
+                  <CgProfile size={27} />
+                  Engagement
+                </NavLink>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </motion.div>
   );
 };
 
 export default SideBar;
+

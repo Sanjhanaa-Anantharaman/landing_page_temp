@@ -19,6 +19,8 @@ import Portfolio from "./components/pages/Portfolio.jsx";
 import Approval from "./components/pages/Approval.jsx";
 import InternshipSection from "./components/pages/Internship.jsx";
 import CommunityServiceLog from "./components/pages/CommunityServiceLog.jsx";
+import WorkCon from "./components/pages/WorkCon.jsx";
+import Engagements from "./components/pages/Engagements.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,6 +35,8 @@ const router = createBrowserRouter(
       <Route path="/approvals" element={<Approval />} />
       <Route path="/internships" element={<InternshipSection />} />
       <Route path="/service-log" element={<CommunityServiceLog />} />
+      <Route path="/workshops" element={<WorkCon />} />
+      <Route path="/engagements" element={<Engagements />} />
     </Route>
   )
 );
